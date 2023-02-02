@@ -96,20 +96,20 @@ public class FlutterContactPickerPlugin: FlutterPlugin, MethodCallHandler,
 
     data?.data?.let { contactUri ->
       val cursor = activity!!.contentResolver.query(contactUri, null, null, null, null)
-      cursor?.use {
-        it.moveToFirst()
+//      cursor?.use {
+      cursor!!.moveToFirst()
        // val phoneType = it.getInt(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE))
        // val customLabel = it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.LABEL))
        // val label = ContactsContract.CommonDataKinds.Email.getTypeLabel(activity!!.resources, phoneType, customLabel) as String
-        val number = it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-        val fullName = it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME))
-        val contactIDIndex = it.getColumnIndex(ContactsContract.Contacts._ID)
+        val number = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+        val fullName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME))
+        val contactIDIndex = cursor.getColumnIndex(ContactsContract.Contacts._ID)
         val phoneNumList = ArrayList<String>()
        // val phoneNumber = HashMap<String, Any>()
        // phoneNumber.put("number", number)
        // phoneNumber.put("label", label)
-        val contactID = it.getString(contactIDIndex)
-        val hasNumbers = it.getString(it.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
+        val contactID = cursor.getString(contactIDIndex)
+        val hasNumbers = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
         val hasHowManyNumbers = hasNumbers.toInt()
         if(hasHowManyNumbers == 1){
           val phoneCursor = activity!!.contentResolver.query(contactUri,
@@ -128,7 +128,7 @@ public class FlutterContactPickerPlugin: FlutterPlugin, MethodCallHandler,
         pendingResult?.success(contact)
         pendingResult = null
         return@use true
-      }
+//      }
     }
 
     pendingResult?.success(null)
