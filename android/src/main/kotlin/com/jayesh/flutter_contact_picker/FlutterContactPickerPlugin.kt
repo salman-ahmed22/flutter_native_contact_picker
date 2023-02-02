@@ -111,20 +111,20 @@ public class FlutterContactPickerPlugin: FlutterPlugin, MethodCallHandler,
         val contactID = cursor.getString(contactIDIndex)
         val hasNumbers = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
         val hasHowManyNumbers = hasNumbers.toInt()
-        if(hasHowManyNumbers == 1){
-          val phoneCursor = activity!!.contentResolver.query(contactUri,
-            null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = "+ contactID,
-            null, null
-          )
-          while (phoneCursor!!.moveToNext()){
-            val contactNum = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-            phoneNumList.add(contactNum.toString())
-          }
-        }
+//        if(hasHowManyNumbers == 1){
+//          val phoneCursor = activity!!.contentResolver.query(contactUri,
+//            null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = "+ contactID,
+//            null, null
+//          )
+//          while (phoneCursor!!.moveToNext()){
+//            val contactNum = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+//            phoneNumList.add(contactNum.toString())
+//          }
+//        }
         val contact = HashMap<String, Any>()
         contact.put("fullName", fullName)
-//        contact.put("phoneNumbers", listOf(number))
-        contact.put("phoneNumbers", phoneNumList)
+        contact.put("phoneNumbers", listOf(number))
+//        contact.put("phoneNumbers", phoneNumList)
         pendingResult?.success(contact)
         pendingResult = null
         return@use true
