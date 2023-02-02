@@ -103,12 +103,28 @@ public class FlutterContactPickerPlugin: FlutterPlugin, MethodCallHandler,
        // val label = ContactsContract.CommonDataKinds.Email.getTypeLabel(activity!!.resources, phoneType, customLabel) as String
         val number = it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
         val fullName = it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME))
+        val contactIDIndex = it.getColumnIndex(ContactsContract.Contacts._ID)
+        val phoneNumList = ArrayList<String>()
        // val phoneNumber = HashMap<String, Any>()
        // phoneNumber.put("number", number)
        // phoneNumber.put("label", label)
+        val contactID = it.getString(contactIDIndex)
+        val hasNumbers = it.getString(it.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
+        val hasHowManyNumbers = hasNumbers.toInt()
+        if(hasHowManyNumbers == 1){
+          val phoneCursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+            null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = "+ contactID,
+            null, null
+          )
+          while (phoneCursor!!.moveToNext()){
+            val contactNum = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+            phoneNumList.add(contactNum.toString())
+          }
+        }
         val contact = HashMap<String, Any>()
         contact.put("fullName", fullName)
-        contact.put("phoneNumbers", listOf(number))
+//        contact.put("phoneNumbers", listOf(number))
+        contact.put("phoneNumbers", phoneNumList)
         pendingResult?.success(contact)
         pendingResult = null
         return@use true
