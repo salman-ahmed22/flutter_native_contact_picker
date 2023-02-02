@@ -112,7 +112,7 @@ public class FlutterContactPickerPlugin: FlutterPlugin, MethodCallHandler,
         val hasNumbers = it.getString(it.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
         val hasHowManyNumbers = hasNumbers.toInt()
         if(hasHowManyNumbers == 1){
-          val phoneCursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+          val phoneCursor = activity!!.contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
             null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = "+ contactID,
             null, null
           )

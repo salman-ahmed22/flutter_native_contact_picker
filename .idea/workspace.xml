@@ -49,7 +49,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675329850660</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="return multiple phone from phonebook">
+      <created>1675329936906</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675329936906</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,43 +74,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="return multiple phone from phonebook" />
     <option name="LAST_COMMIT_MESSAGE" value="return multiple phone from phonebook" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1181" height="293" key="GridCell.Tab.0.bottom" timestamp="1627199404170">
-      <screen x="0" y="23" width="1600" height="797" />
-    </state>
-    <state width="1558" height="163" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1627196159480" />
-    <state width="1181" height="373" key="GridCell.Tab.0.bottom/0.23.1600.791@0.23.1600.791" timestamp="1627195215446" />
-    <state width="1181" height="293" key="GridCell.Tab.0.bottom/0.23.1600.794@0.23.1600.794" timestamp="1627196666260" />
-    <state width="1181" height="293" key="GridCell.Tab.0.bottom/0.23.1600.797@0.23.1600.797" timestamp="1627199404170" />
-    <state width="1181" height="293" key="GridCell.Tab.0.bottom/0.23.1600.800@0.23.1600.800" timestamp="1627197510363" />
-    <state width="1181" height="293" key="GridCell.Tab.0.bottom/0.23.1600.802@0.23.1600.802" timestamp="1627199207154" />
-    <state width="1181" height="293" key="GridCell.Tab.0.center" timestamp="1627199404169">
-      <screen x="0" y="23" width="1600" height="797" />
-    </state>
-    <state width="1558" height="163" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1627196159479" />
-    <state width="1181" height="373" key="GridCell.Tab.0.center/0.23.1600.791@0.23.1600.791" timestamp="1627195215445" />
-    <state width="1181" height="293" key="GridCell.Tab.0.center/0.23.1600.794@0.23.1600.794" timestamp="1627196666259" />
-    <state width="1181" height="293" key="GridCell.Tab.0.center/0.23.1600.797@0.23.1600.797" timestamp="1627199404169" />
-    <state width="1181" height="293" key="GridCell.Tab.0.center/0.23.1600.800@0.23.1600.800" timestamp="1627197510363" />
-    <state width="1181" height="293" key="GridCell.Tab.0.center/0.23.1600.802@0.23.1600.802" timestamp="1627199207153" />
-    <state width="1181" height="293" key="GridCell.Tab.0.left" timestamp="1627199404169">
-      <screen x="0" y="23" width="1600" height="797" />
-    </state>
-    <state width="1558" height="163" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1627196159478" />
-    <state width="1181" height="373" key="GridCell.Tab.0.left/0.23.1600.791@0.23.1600.791" timestamp="1627195215445" />
-    <state width="1181" height="293" key="GridCell.Tab.0.left/0.23.1600.794@0.23.1600.794" timestamp="1627196666259" />
-    <state width="1181" height="293" key="GridCell.Tab.0.left/0.23.1600.797@0.23.1600.797" timestamp="1627199404169" />
-    <state width="1181" height="293" key="GridCell.Tab.0.left/0.23.1600.800@0.23.1600.800" timestamp="1627197510363" />
-    <state width="1181" height="293" key="GridCell.Tab.0.left/0.23.1600.802@0.23.1600.802" timestamp="1627199207153" />
-    <state width="1181" height="293" key="GridCell.Tab.0.right" timestamp="1627199404169">
-      <screen x="0" y="23" width="1600" height="797" />
-    </state>
-    <state width="1558" height="163" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1627196159479" />
-    <state width="1181" height="373" key="GridCell.Tab.0.right/0.23.1600.791@0.23.1600.791" timestamp="1627195215446" />
-    <state width="1181" height="293" key="GridCell.Tab.0.right/0.23.1600.794@0.23.1600.794" timestamp="1627196666260" />
-    <state width="1181" height="293" key="GridCell.Tab.0.right/0.23.1600.797@0.23.1600.797" timestamp="1627199404169" />
-    <state width="1181" height="293" key="GridCell.Tab.0.right/0.23.1600.800@0.23.1600.800" timestamp="1627197510363" />
-    <state width="1181" height="293" key="GridCell.Tab.0.right/0.23.1600.802@0.23.1600.802" timestamp="1627199207154" />
   </component>
 </project>
